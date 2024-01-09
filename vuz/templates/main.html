@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+{% block content %}
+<main>
+    <div class="content">
+        <h1>Найти вуз по предметам</h1>
+        <form action="/" class="form" method='POST'>
+            {% csrf_token %}
+            <div class="form__select">
+                <label for="first">Первый предмет:</label>
+                <select name="first" id="first">
+                    <option value="1">Математика</option>
+                    <option value="2">Химия</option>
+                    <option value="3">Обществознание</option>
+                    <option value="4">История</option>
+                    <option value="5">Иностранный язык</option>
+                    <option value="6">Биология</option>
+                    <option value="7">География</option>
+                    <option value="8">Физика</option>
+                    <option value="9">Информатика</option>
+                    <option value="10">Литература</option>
+                </select>
+            </div>
+            <div class="form__select">
+                <label for="second">Второй предмет:</label>
+                <select name="second" id="second">
+                    <option value="0">----</option>
+                    <option value="1">Математика</option>
+                    <option value="2">Химия</option>
+                    <option value="3">Обществознание</option>
+                    <option value="4">История</option>
+                    <option value="5">Иностранный язык</option>
+                    <option value="6">Биология</option>
+                    <option value="7">География</option>
+                    <option value="8">Физика</option>
+                    <option value="9">Информатика</option>
+                    <option value="10">Литература</option>
+                </select>
+            </div>
+            <input type="text" id='split' name="split" value='15' hidden>
+            <input type="text" id='page' name="page" value="1" hidden>
+            <div class="form__submit">
+                <button type="submit" >
+                    Найти
+                </button>
+            </div>
+        </form>
+    </div>
+</main>
+{% endblock content %}

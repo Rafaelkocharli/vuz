@@ -1,0 +1,54 @@
+{% extends "index.html" %}
+{% block content %}
+<div class="main">
+    <div class="bar" data-page="{{page}}" data-maxpage="{{maxpage}}" id="data">
+        <form action="/" method='POST'>
+            {% csrf_token %}
+            <input type="text" hidden name="first" id="first" value="{{f}}">
+            <input type="text" hidden name="second" id="second" value="{{s}}">
+            <input type="text" hidden id='split' name="split" value='{{split}}'>
+            <input type="text" hidden id='page' name="page" value='{{ page|add:-1 }}'>
+            <button class="chPage" id="backBut"><</button>
+        </form>
+        <form action="/" method='POST'>
+            {% csrf_token %}
+            <input type="text" hidden name="first" id="first" value="{{f}}">
+            <input type="text" hidden name="second" id="second" value="{{s}}">
+            <input type="text" hidden id='split' name="split" value='{{split}}'>
+            <input type="text" hidden id='page' name="page" value='{{ page|add:+1 }}'>
+            <button class="chPage" id="forwBut">></button>
+        </form>
+        <script>
+            const backBut = document.getElementById('backBut');
+            const forwBut = document.getElementById('forwBut');
+            const data = document.getElementById('data');
+            if (data.dataset.page == '1') {
+                backBut.setAttribute('disabled', ' ')
+            }
+            if (data.dataset.page == data.dataset.maxpage) {
+                forwBut.setAttribute('disabled', ' ')
+            }
+        </script>
+    </div>
+    <table class="table">
+        <thead>
+            <th>ID</th>
+            <th>Название</th>
+            <th>Предмет 1</th>
+            <th>Предмет 2</th>
+            <th>Минимальный проходной балл</th>
+        </thead>
+        <tbody>
+            {% for i in data %}             
+            <tr>
+                <td>{{i.id}}</td>
+                <td>{{i.name}}</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

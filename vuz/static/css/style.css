@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body, html {
+    height: 100%;
+}
+header {
+    background-color: rgb(24, 24, 24);
+    height: 50px;
+    color: rgb(122, 122, 122);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+nav {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    padding: 0px 30px;
+}
+nav a:hover {
+    color: rgb(137, 137, 137);
+    transition: .15s;
+}
+main {
+    min-height: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+footer {
+    background-color: rgb(24, 24, 24);
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 26px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+h1 {
+    margin-bottom: 30px;
+}
+#root {
+    position: relative;
+    min-height: 100%;
+}
+.content {
+    margin-top: 100px;
+    background-color: rgb(245, 245, 245);
+    border-radius: 20px;
+    padding: 50px;
+    height: 200px;
+   
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100px;
+    padding: 0px 20px;
+}
+.form__select {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+.form__select select {
+    padding: 5px;
+    outline: 0;
+
+}
+.form__submit button {
+    border: none;
+    background-color: rgb(16, 165, 16);
+    padding: 10px 15px;
+    font-size: 18px;
+    border-radius: 5px;
+    color: white;
+}
+.form__submit button:hover {
+    cursor: pointer;
+    background-color: rgb(12, 119, 12);
+    transition: 0.2s;
+}
+.table {
+	width: 90%;
+	margin: 20px;
+    margin-top: 5px;
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+}
+.table th {
+	font-weight: bold;
+	padding: 5px;
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.table td {
+	border: 1px solid #dddddd;
+	padding: 5px;
+}
+.main {
+    min-height: 100%;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.bar {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    width: 90%;
+}
+.chPage {
+    width: 30px;
+    height: 30px;
+    font-weight: bolder;
+    box-shadow: 1px;
+    border: none;
+    margin: 2px;
+    border-radius: 5px;
+    background-color: rgb(235, 235, 235);
+}
+.chPage:hover {
+    cursor:pointer;
+    background-color: rgb(219, 219, 219);
+}
